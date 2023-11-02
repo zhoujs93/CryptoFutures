@@ -6,4 +6,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
-/data/
+/data/futures/
+/data/processed_futures/
+data/processed_futures/
+data/futures/

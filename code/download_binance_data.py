@@ -34,7 +34,7 @@ if __name__ == '__main__':
             df_all = pd.concat(dfs, axis = 0, ignore_index = True)
             write_dir = pathlib.Path.cwd().parent / 'data' / 'processed_futures'
             write_dir.mkdir(parents = True, exist_ok = True)
-            file_name = f'{token}_1m.feather'
+            file_name = f'{token}_1m.pickle'
             df_all.to_pickle(str(write_dir / file_name))
         except Exception as e:
             print(f'Error for {token}: {e}')

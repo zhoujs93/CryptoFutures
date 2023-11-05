@@ -11,6 +11,6 @@ if __name__ == '__main__':
     path = pathlib.Path.cwd().parent / 'data' / 'processed_futures'
     dfs = {}
     for token in universe:
-        name = f'{token}_1m.feather'
-        df = pd.read_feather(str(path / name))
+        name = f'{token}_1m.pickle'
+        df = pd.read_pickle(str(path / name))
         dfs[token] = df

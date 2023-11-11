@@ -30,6 +30,10 @@ if __name__ == '__main__':
             dfs = []
             for file in csv_files:
                 df = pd.read_csv(file, index_col = None, names = columns)
+                idx = df.index[df['open_time'] != 'open_time']
+                df = df.loc[idx].reset_index(drop = True)
+                for col in columns:
+                    df[col] = df[col].astype(float)
                 dfs.append(df)
             df_all = pd.concat(dfs, axis = 0, ignore_index = True)
             write_dir = pathlib.Path.cwd().parent / 'data' / 'processed_futures'

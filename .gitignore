@@ -1,2 +1,12 @@
 /data/futures/
 /data/processed_futures/
+/data/processed_data/
+/data/*.feather
+/data/btc_eth_test.csv
+/data/test_eth_panel.csv
+/data/test_panel.csv
+/code/.ipynb_checkpoints/
+/.ipynb_checkpoints/
+/data/plots/
+/data/data_universe.pickle
+/data/

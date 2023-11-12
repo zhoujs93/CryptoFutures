@@ -2,6 +2,7 @@ import pandas as pd
 import pathlib
 from factor_util import *
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 def hullMA(x, n = 50):
     sma1 = x.rolling(n).mean()
@@ -28,23 +29,24 @@ if __name__ == '__main__':
 
     df_btc = pd.read_feather('../data/processed_data/BTCUSDT_1m.feather')
     df_eth = pd.read_feather('../data/processed_data/ETHUSDT_1m.feather')
-    df_sol = pd.read_feather('../data/processed_data/SOLUSDT_1m.feather')
+    # df_sol = pd.read_feather('../data/processed_data/SOLUSDT_1m.feather')
 
-    df = pd.concat([df_btc, df_eth, df_sol], axis = 0, ignore_index = True)
+    df = pd.concat([df_btc, df_eth], axis = 0, ignore_index = True)
     df = df.sort_values(by = ['open_time'], ignore_index = True)
-    df['target_15m'] = -1 * df.groupby(['token'])['close'].pct_change(15).shift(-1)
-    # df = df.iloc[1000000:1100000, :]
+    df['target_15m'] = -1 * df.groupby(['token'])['close'].pct_change(-15).shift(-1)
+    df = df.iloc[1000000:1100000, :]
 
 
-    # df_btc['returns_15m'] = df_btc['close'].pct_change(-15)
-    # df_btc['fwd_returns_15m'] = -1 * df_btc['returns_15m'].shift(-1)
-    # df_btc['test_15m'] = (df_btc['close'].shift(-16) / df_btc['close'].shift(-1)) - 1
-    # df_btc['close_16'] = df_btc['close'].shift(-16)
-    # df_btc['close_1'] = df_btc['close'].shift(-1)
-    #
-    # df_test = df_btc[['open_time', 'fwd_returns_15m','returns_15m', 'test_15m', 'close', 'close_16', 'close_1']]
-    # df_test = df_test.set_index(['open_time'])
-    # df_test = df_test.iloc[:100000, :]
+    df_btc['returns_15m'] = df_btc['close'].pct_change(-15)
+    df_btc['fwd_returns_15m'] = -1 * df_btc['returns_15m'].shift(-1)
+    df_btc['test_15m'] = (df_btc['close'].shift(-16) / df_btc['close'].shift(-1)) - 1
+    df_btc['close_16'] = df_btc['close'].shift(-16)
+    df_btc['close_1'] = df_btc['close'].shift(-1)
+    df_btc['open_1'] = df_btc['open'].shift(-1)
+
+    df_test = df_btc[['open_time', 'fwd_returns_15m','close', 'close_16', 'close_1', 'open', 'open_1']]
+    df_test = df_test.set_index(['open_time'])
+    df_test = df_test.iloc[-10000:, :]
 
     columns = ['open_time', 'open', 'high', 'low', 'close', 'volume',
                'close_time', 'quote_asset_volume', 'number_of_trades',
@@ -94,4 +96,8 @@ if __name__ == '__main__':
         df[f'log_return_{num}'] = grouped_df['close'].transform(lambda x: np.log(x).diff().rolling(num).mean().ffill().bfill())
 
     corr_df = calculate_corr(df)
-    t = corr_df['target_15m']
+
+    ax = df.loc[df['token'] == 'BTCUSDT']['target_15m'].hist(figsize = (12,12), bins = 100)
+    plt.show()
+
+    fig = px.histogram(df, x = 'target_15m', color = '')

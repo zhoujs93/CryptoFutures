@@ -4,19 +4,19 @@ import pathlib
 import glob
 
 if __name__ == '__main__':
-    # data_dumper = BinanceDataDumper(
-    #     path_dir_where_to_dump = '../data/',
-    #     asset_class = 'um',
-    #     data_type = 'klines',
-    #     data_frequency = '1m'
-    # )
-    # x = data_dumper.dump_data(
-    #     tickers = None,
-    #     date_start = None,
-    #     date_end = None,
-    #     is_to_update_existing = False,
-    #     tickers_to_exclude = ["UST"]
-    # )
+    data_dumper = BinanceDataDumper(
+        path_dir_where_to_dump = '../data/',
+        asset_class = 'um',
+        data_type = 'klines',
+        data_frequency = '1m'
+    )
+    x = data_dumper.dump_data(
+        tickers = None,
+        date_start = None,
+        date_end = None,
+        is_to_update_existing = False,
+        tickers_to_exclude = ["UST"]
+    )
     columns = ['open_time', 'open', 'high', 'low', 'close', 'volume',
                'close_time', 'quote_asset_volume', 'number_of_trades',
                'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume',

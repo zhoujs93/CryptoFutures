@@ -37,7 +37,6 @@ if __name__ == '__main__':
         df = df.sort_values(by = 'open_time', ignore_index = True)
         df = add_all_ta_features(df, open = 'open', high = 'high', low = 'low',
                                  close = 'close', volume = 'volume', fillna = True)
-        df['returns'] = df['close'].pct_change(periods=5)
-        df['returns_5m'] = df['returns'].shift(-5)
+        df['target_15m'] = -1 * df['close'].pct_change(15).shift(-1)
         df.to_feather(f'../data/processed_data/{token}_1m.feather')
 

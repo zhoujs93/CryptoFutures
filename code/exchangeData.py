@@ -1,72 +1,54 @@
 import pandas as pd
-from binance import Client
 from datetime import datetime, timedelta
+from binance.enums import HistoricalKlinesType
 import requests
 import json
+from mexc_sdk import Spot
+import pandas as pd
+from binance.cm_futures import CMFutures
+import logging
+from binance.um_futures import UMFutures
+from binance.lib.utils import config_logging
+import time
 
-client = Client()
-date_format = "%Y-%m-%d %H:%M:%S"
-start = datetime(2022, 1, 1, 16, 0, 0)
-end = datetime.now()
+exchange_key = 'HHwPdDKvCO3zxbLqQbjxcb0N2wDNDs2aD5aIz3M3GsuiIntsgfV0wWWIaqfnKriw'
+end_time = round(time.time() * 1000)
+end_datetime = datetime.fromtimestamp(end_time / 1000.0)
+config_logging(logging, logging.DEBUG)
 
+um_futures_client = UMFutures(key = exchange_key)
 
-def get_binance_data(underlying: str, start: str, end: str, interval=client.KLINE_INTERVAL_1DAY):
-    result = client.get_historical_klines(symbol=f'{underlying.upper()}USDT',
-                                          start_str=start, end_str=end, interval=interval)
+kline = um_futures_client.klines("BTCUSDT", "1m", end_time = end_time)
 
-    closing_prices = [float(x[4]) for x in result]
-    open_prices = [float(x[1]) for x in result]
-    high_prices = [float(x[2]) for x in result]
-    low_prices = [float(x[3]) for x in result]
-    dates = [datetime.fromtimestamp(x[0] / 1000) for x in result]
-    volume = [float(x[5]) for x in result]
-    num_trades = [float(x[8]) for x in result]
+columns = ['open_time', 'open', 'high', 'low', 'close', 'volume',
+           'close_time', 'quote_asset_volume', 'number_of_trades',
+           'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume',
+           'ignore']
 
-    data = pd.DataFrame(index=dates)
-    data['Open'] = open_prices
-    data['High'] = high_prices
-    data['Low'] = low_prices
-    data['Close'] = closing_prices
-    data['Volume'] = volume
-    data['Number of Trades'] = num_trades
+df = pd.DataFrame(kline, columns = columns)
+df['open_time'] = pd.to_datetime(df['open_time'], unit='ms')
+df['close_time'] = pd.to_datetime(df['close_time'], unit='ms')
 
-    return data
-
-
-binance_data = get_binance_data("BTC", start.strftime(date_format), end.strftime(date_format))
+# logging.info(um_futures_client.klines("BTCUSDT", "1d"))
 
 
-def get_ftx_data(underlying: str, start: datetime, end: datetime, resolution=86400):
-    FTX_DATE_FORMAT = "%Y-%m-%dT%H:%M:%S+00:00"
-    session = requests.session()
-    api_url = "https://ftx.com/api"
-    start = int(start.timestamp())
-    end = int(end.timestamp())
-    endpoint = f'/markets/{underlying}/candles?resolution={resolution}&start_time={start}&end_time={end}'
-
-    response = session.get(api_url + endpoint)
-    response = json.loads(response.text.encode('ascii'))
-
-    if response['success']:
-        data = response['result']
-        closing_prices = [x['close'] for x in data]
-        open_prices = [x['open'] for x in data]
-        high_prices = [x['high'] for x in data]
-        low_prices = [x['low'] for x in data]
-        dates = [datetime.strptime(x['startTime'], FTX_DATE_FORMAT) for x in data]
-        volume = [x['volume'] for x in data]
-
-        ftx_data = pd.DataFrame(index=dates)
-        ftx_data['Open'] = open_prices
-        ftx_data['High'] = high_prices
-        ftx_data['Low'] = low_prices
-        ftx_data['Close'] = closing_prices
-        ftx_data['Volume'] = volume
-
-        return ftx_data
-
-    else:
-        raise Exception("no successful api response")
+# client = Client(exchange_key)
+# date_format = "%Y-%m-%d %H:%M:%S"
+# start = datetime(2022, 1, 1, 16, 0, 0)
+# end = datetime.now()
+#
+# mexc_api = 'mx0vglWv2zvTJs6wsG'
+# mexc = '5fd10275f5064687adfb085ce060197b'
+#
+# klines = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE,
+#                                       "1 day ago UTC", klines_type=HistoricalKlinesType.FUTURES)
+#
+# columns = ['open_time', 'open', 'high', 'low', 'close', 'volume',
+#            'close_time', 'quote_asset_volume', 'number_of_trades',
+#            'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume',
+#            'ignore']
+# df = pd.DataFrame(klines, columns = columns)
+# df['open_time'] = pd.to_datetime(df['open_time'], unit='ms')
+# df['close_time'] = pd.to_datetime(df['close_time'], unit='ms')
 
 
-# ftx_data = get_ftx_data("BTC/USD", start, end)

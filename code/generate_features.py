@@ -1,14 +1,20 @@
 import pandas as pd
 import pathlib
-from alpha101 import *
 from factor_util import *
 import matplotlib.pyplot as plt
 
-def calcHullMA(price: pd.Series, N=50):
-    SMA1 = price.rolling(N).mean()
-    SMA2 = price.rolling(int(N/2)).mean()
-    return (2 * SMA2 - SMA1).rolling(int(np.sqrt(N))).mean()
+def hullMA(x, n = 50):
+    sma1 = x.rolling(n).mean()
+    sma2 = x.rolling(int(n/2)).mean()
+    out = (2 * sma1 - sma2).rolling(int(np.sqrt(n))).mean()
+    return x - out
 
+def calculate_corr(df):
+    skip_features = ['returns_5m', 'open_time', 'close_time', 'target_15m', 'ignore', 'token']
+    features = [x for x in df.columns if x not in skip_features]
+    ta_features = [x for x in df.columns if x not in skip_features and x not in columns]
+    tgt_corr = df.groupby(['token'])[ta_features + ['target_15m']].corr()
+    return tgt_corr
 
 if __name__ == '__main__':
 
@@ -26,16 +32,26 @@ if __name__ == '__main__':
 
     df = pd.concat([df_btc, df_eth, df_sol], axis = 0, ignore_index = True)
     df = df.sort_values(by = ['open_time'], ignore_index = True)
+    df['target_15m'] = -1 * df.groupby(['token'])['close'].pct_change(15).shift(-1)
     # df = df.iloc[1000000:1100000, :]
 
+
+    # df_btc['returns_15m'] = df_btc['close'].pct_change(-15)
+    # df_btc['fwd_returns_15m'] = -1 * df_btc['returns_15m'].shift(-1)
+    # df_btc['test_15m'] = (df_btc['close'].shift(-16) / df_btc['close'].shift(-1)) - 1
+    # df_btc['close_16'] = df_btc['close'].shift(-16)
+    # df_btc['close_1'] = df_btc['close'].shift(-1)
+    #
+    # df_test = df_btc[['open_time', 'fwd_returns_15m','returns_15m', 'test_15m', 'close', 'close_16', 'close_1']]
+    # df_test = df_test.set_index(['open_time'])
+    # df_test = df_test.iloc[:100000, :]
 
     columns = ['open_time', 'open', 'high', 'low', 'close', 'volume',
                'close_time', 'quote_asset_volume', 'number_of_trades',
                'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume',
                'ignore']
 
-    df['returns_15m'] = df.groupby(['token'])['close'].pct_change(15)
-    df['target_15m'] = df.groupby(['token'])['returns_15m'].shift(-1)
+    token_grouped = df.groupby(['token'])
 
     def gen_cross_features(x, lag = 60):
         lag_arr = np.ones(lag)
@@ -49,8 +65,8 @@ if __name__ == '__main__':
         return np.log(x / x.shift(60)).fillna(0)
 
     lag = 60
-    df[f'log_close/mean_{lag}'] = df.groupby(['token'])['close'].transform(lambda x: gen_cross_features(x, lag = lag))
-    df[f'log_return_{lag}'] = df.groupby(['token'])['close'].transform(lambda x: log_return_np(x))
+    df[f'log_close/mean_{lag}'] = token_grouped['close'].transform(lambda x: gen_cross_features(x, lag = lag))
+    df[f'log_return_{lag}'] = token_grouped['close'].transform(lambda x: log_return_np(x))
 
     df[f'mean_close/mean_{lag}'] = df.groupby(['open_time'])[f'log_close/mean_{lag}'].transform(lambda x: x.mean())
     df[f'mean_log_returns_{lag}'] = df.groupby(['open_time'])[f'log_return_{lag}'].transform(lambda x: x.mean())
@@ -58,8 +74,24 @@ if __name__ == '__main__':
     df[f'log_close_mean_ratio_{lag}'] = df[f'log_close/mean_{lag}'] - df[f'mean_close/mean_{lag}']
     df[f'log_return_{lag}_mean_log_returns_{lag}'] = df[f'log_return_{lag}'] - df[f'mean_log_returns_{lag}']
 
-    skip_features = ['returns_5m', 'open_time', 'close_time', 'target_15m', 'ignore', 'token']
-    features = [x for x in df.columns if x not in skip_features]
-    ta_features = [x for x in df.columns if x not in skip_features and x not in columns]
-    tgt_corr = df.groupby(['token'])[ta_features + ['target_15m']].corr()
-    t = tgt_corr['target_15m']
+
+
+    df['target_return'] = token_grouped['close'].transform(lambda x: (x.shift(1) / x.shift(16)) - 1)
+
+    sma_lags = [15, 60, 240]
+    grouped_df = df.groupby(['token'])
+    for sma_lag in sma_lags:
+        df[f'sma{sma_lag}'] = grouped_df['close'].transform(lambda x: (x.rolling(lag).mean() / x) - 1)
+        df[f'return{sma_lag}'] = grouped_df['close'].transform(lambda x: x.pct_change(sma_lag))
+        df[f'volume_change_{sma_lag}'] = grouped_df['volume'].transform(lambda x: x.pct_change(sma_lag))
+
+    hull_lags = [76, 240, 800]
+    for hull_lag in hull_lags:
+        df[f'hull_{hull_lag}'] = grouped_df['close'].transform(lambda x: hullMA(x, hull_lag))
+
+    fibo_list = [55, 210, 340, 890, 3750]
+    for num in fibo_list:
+        df[f'log_return_{num}'] = grouped_df['close'].transform(lambda x: np.log(x).diff().rolling(num).mean().ffill().bfill())
+
+    corr_df = calculate_corr(df)
+    t = corr_df['target_15m']

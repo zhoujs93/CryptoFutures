@@ -2,8 +2,17 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig host="34.70.76.181" id="5616b6ed-f134-472e-b8c7-2c3d5242d10e" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-3" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
-        <option name="customName" value="cryptofutures-3" />
+      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="34.130.158.194" id="0622bf37-6a23-4899-93e0-db592f6ab68a" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="crypto" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="crypto" />
+      </sshConfig>
+      <sshConfig host="34.130.173.115" id="5616b6ed-f134-472e-b8c7-2c3d5242d10e" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-4" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="cryptofutures-4" />
+      </sshConfig>
+      <sshConfig host="34.130.56.162" id="a3250598-d084-4068-b9e7-f91d62e811fd" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-5" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="cryptofutures-5" />
+      </sshConfig>
+      <sshConfig host="34.130.40.179" id="ddbe8370-e892-46bc-b914-ed5d1cb53477" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-6" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="cryptofutures-6" />
       </sshConfig>
     </configs>
   </component>

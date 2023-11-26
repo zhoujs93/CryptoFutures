@@ -3,7 +3,21 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="b960ac2d-659b-43c0-bc3c-5385207e34f1" name="cryptofutures-3">
-        <fileTransfer accessType="SFTP" host="34.70.76.181" port="22" sshConfigId="5616b6ed-f134-472e-b8c7-2c3d5242d10e" sshConfig="cryptofutures-3" keyPair="true">
+        <fileTransfer accessType="SFTP" host="34.130.173.115" port="22" sshConfigId="5616b6ed-f134-472e-b8c7-2c3d5242d10e" sshConfig="cryptofutures-4" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="a24218f6-15b1-4a5b-9801-0fa735633396" name="cryptofutures-5">
+        <fileTransfer accessType="SFTP" host="34.130.56.162" port="22" sshConfigId="a3250598-d084-4068-b9e7-f91d62e811fd" sshConfig="cryptofutures-5" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="ef0c82d5-8196-4e40-8460-09ebb3f750f7" name="cryptofutures-6">
+        <fileTransfer accessType="SFTP" host="34.130.40.179" port="22" sshConfigId="ddbe8370-e892-46bc-b914-ed5d1cb53477" sshConfig="cryptofutures-6" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

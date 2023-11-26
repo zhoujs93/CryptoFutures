@@ -15,6 +15,27 @@
           </excludedPaths>
         </serverdata>
       </paths>
+      <paths name="cryptofutures-3">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="cryptofutures-5">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="cryptofutures-6">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
   </component>
 </project>

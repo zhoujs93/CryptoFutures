@@ -14,3 +14,9 @@
 /code/exchangeData.py
 /code/mexc_spot_v3.py
 /code/download_data.py
+/output/
+/time-series-prediction-subnet/*
+!/time-series-prediction-subnet/neurons/
+!/time-series-prediction-subnet/runnable/
+/papers/
+/.bittensor/

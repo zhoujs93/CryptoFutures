@@ -63,21 +63,6 @@ def add_momentum_ta(
     colprefix: str = "",
     vectorized: bool = False,
 ) -> pd.DataFrame:
-    """Add trend technical analysis features to dataframe.
-
-    Args:
-        df (pandas.core.frame.DataFrame): Dataframe base.
-        high (str): Name of 'high' column.
-        low (str): Name of 'low' column.
-        close (str): Name of 'close' column.
-        volume (str): Name of 'volume' column.
-        fillna(bool): if True, fill nan values.
-        colprefix(str): Prefix column names inserted
-        vectorized(bool): if True, use only vectorized functions indicators
-
-    Returns:
-        pandas.core.frame.DataFrame: Dataframe with new features.
-    """
 
     # Relative Strength Index (RSI)
     df[f"{colprefix}momentum_rsi"] = RSIIndicator(
@@ -249,7 +234,6 @@ def add_volume_ta(
 
     return df
 
-# Two new features from the competition tutorial
 def upper_shadow(df):
     return df["High"] - np.maximum(df["Close"], df["Open"])
 

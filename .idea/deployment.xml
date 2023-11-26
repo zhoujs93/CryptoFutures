@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="crypto">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/data/futures" />
+            <excludedPath local="true" path="$PROJECT_DIR$/data/processed_data" />
+            <excludedPath local="true" path="$PROJECT_DIR$/data/processed_futures" />
+            <excludedPath local="true" path="$PROJECT_DIR$/data/processed_metrics" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

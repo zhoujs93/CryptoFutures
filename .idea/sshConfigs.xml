@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="34.70.76.181" id="5616b6ed-f134-472e-b8c7-2c3d5242d10e" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-3" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="cryptofutures-3" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b960ac2d-659b-43c0-bc3c-5385207e34f1" name="cryptofutures-3">
+        <fileTransfer accessType="SFTP" host="34.70.76.181" port="22" sshConfigId="5616b6ed-f134-472e-b8c7-2c3d5242d10e" sshConfig="cryptofutures-3" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -10,7 +10,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="a24218f6-15b1-4a5b-9801-0fa735633396" name="cryptofutures-5">
-        <fileTransfer accessType="SFTP" host="34.130.56.162" port="22" sshConfigId="a3250598-d084-4068-b9e7-f91d62e811fd" sshConfig="cryptofutures-5" keyPair="true">
+        <fileTransfer accessType="SFTP" host="34.130.158.194" port="22" sshConfigId="a3250598-d084-4068-b9e7-f91d62e811fd" sshConfig="cryptofutures-5" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
@@ -18,6 +18,20 @@
       </webServer>
       <webServer id="ef0c82d5-8196-4e40-8460-09ebb3f750f7" name="cryptofutures-6">
         <fileTransfer accessType="SFTP" host="34.130.40.179" port="22" sshConfigId="ddbe8370-e892-46bc-b914-ed5d1cb53477" sshConfig="cryptofutures-6" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="eddacf25-38c3-4172-b83e-539a3a325a70" name="cryptofutures-7">
+        <fileTransfer accessType="SFTP" host="34.173.190.78" port="22" sshConfigId="dc6570af-6176-427c-8d13-d0178cb2503c" sshConfig="cryptofutures-7" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="18e62a90-0579-4264-a77b-daafb34ebd16" name="hetzner">
+        <fileTransfer accessType="SFTP" host="195.201.40.27" port="22" sshConfigId="880fe7f4-0fe9-4781-be04-bb413dba0eaa" sshConfig="hetzner-putsncalls23" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

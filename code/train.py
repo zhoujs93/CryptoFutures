@@ -8,7 +8,7 @@ from models import *
 # from tensorflow.keras.callbacks import Callback, ReduceLROnPlateau, ModelCheckpoint, EarlyStopping
 from tensorflow.python.keras.callbacks import Callback, ReduceLROnPlateau, ModelCheckpoint, EarlyStopping
 import tensorflow_addons as tfa
-
+from tfts import get_data
 def generate_label(df, threshold = 0.002):
     df['label'] = 0
     df.loc[(df['target_15m'] <= -1*threshold), 'label'] = 1

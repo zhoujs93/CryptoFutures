@@ -36,6 +36,20 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="cryptofutures-7">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="hetzner">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
   </component>
 </project>

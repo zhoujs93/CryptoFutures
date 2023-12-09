@@ -2,36 +2,106 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="b960ac2d-659b-43c0-bc3c-5385207e34f1" name="cryptofutures-3">
-        <fileTransfer accessType="SFTP" host="34.130.173.115" port="22" sshConfigId="5616b6ed-f134-472e-b8c7-2c3d5242d10e" sshConfig="cryptofutures-4" keyPair="true">
+      <webServer id="b960ac2d-659b-43c0-bc3c-5385207e34f1" name="tao9002">
+        <fileTransfer accessType="SFTP" host="34.130.158.194" port="22" sshConfigId="0622bf37-6a23-4899-93e0-db592f6ab68a" sshConfig="tao9002" keyPair="true">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="a24218f6-15b1-4a5b-9801-0fa735633396" name="cryptofutures-5">
-        <fileTransfer accessType="SFTP" host="34.130.158.194" port="22" sshConfigId="a3250598-d084-4068-b9e7-f91d62e811fd" sshConfig="cryptofutures-5" keyPair="true">
+      <webServer id="a24218f6-15b1-4a5b-9801-0fa735633396" name="tao9003">
+        <fileTransfer accessType="SFTP" host="34.130.40.179" port="22" sshConfigId="a3250598-d084-4068-b9e7-f91d62e811fd" sshConfig="tao9003" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
       <webServer id="ef0c82d5-8196-4e40-8460-09ebb3f750f7" name="cryptofutures-6">
-        <fileTransfer accessType="SFTP" host="34.130.40.179" port="22" sshConfigId="ddbe8370-e892-46bc-b914-ed5d1cb53477" sshConfig="cryptofutures-6" keyPair="true">
+        <fileTransfer accessType="SFTP" host="34.130.158.194" port="22" sshConfigId="0622bf37-6a23-4899-93e0-db592f6ab68a" sshConfig="tao9002" keyPair="true">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="eddacf25-38c3-4172-b83e-539a3a325a70" name="cryptofutures-7">
-        <fileTransfer accessType="SFTP" host="34.173.190.78" port="22" sshConfigId="dc6570af-6176-427c-8d13-d0178cb2503c" sshConfig="cryptofutures-7" keyPair="true">
+      <webServer id="eddacf25-38c3-4172-b83e-539a3a325a70" name="tao9001">
+        <fileTransfer accessType="SFTP" host="34.130.173.115" port="22" sshConfigId="dc6570af-6176-427c-8d13-d0178cb2503c" sshConfig="tao9001" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
       <webServer id="18e62a90-0579-4264-a77b-daafb34ebd16" name="hetzner">
-        <fileTransfer accessType="SFTP" host="195.201.40.27" port="22" sshConfigId="880fe7f4-0fe9-4781-be04-bb413dba0eaa" sshConfig="hetzner-putsncalls23" keyPair="true">
+        <fileTransfer accessType="SFTP" sshConfigId="880fe7f4-0fe9-4781-be04-bb413dba0eaa" sshConfig="hetzner-putsncalls23">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="7c20bbee-1e98-4156-a97c-870d5985bc6c" name="cryptofutures-gpu">
+        <fileTransfer accessType="SFTP" sshConfigId="fca3bc1a-d543-41a2-8762-e0b7e04979f3" sshConfig="crypto-gpu">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="93434813-4ca1-4453-bca5-90b96511c14c" name="tao9005">
+        <fileTransfer accessType="SFTP" host="34.130.156.186" port="22" sshConfigId="5b5ead3a-0392-4ee1-864f-9c3b4f98f6de" sshConfig="tao9005" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="141ce2de-23d3-497d-a265-8e07d6e8038d" name="miner_z9100">
+        <fileTransfer accessType="SFTP" host="34.130.39.105" port="22" sshConfigId="9b05eda3-ecab-4553-ae8d-6f3b2f0238ae" sshConfig="mzhou9100" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="854f0f55-bf02-4c13-be96-40515788c48d" name="tao9004">
+        <fileTransfer accessType="SFTP" host="34.130.166.162" port="22" sshConfigId="7304fc8a-b169-4b99-aca8-bcd88617f3ad" sshConfig="tao9004" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="98c82a82-9942-45ac-be9d-2ee7c41676e7" name="miner_z9101">
+        <fileTransfer accessType="SFTP" host="34.118.184.221" port="22" sshConfigId="dd35db5d-578c-4292-8e1b-94231acf22b1" sshConfig="mzhou9101" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="945ca410-6c82-4091-90f2-9532cf212a22" name="richie9200">
+        <fileTransfer accessType="SFTP" host="35.203.6.163" port="22" sshConfigId="aee6f053-5a03-4554-b1d5-b0831368ef03" sshConfig="richie9200" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="3900be04-e133-44f0-bdef-586b5068a665" name="miner_z9102">
+        <fileTransfer accessType="SFTP" host="34.152.12.98" port="22" sshConfigId="1599106b-4670-4f08-b467-c085e3cceb16" sshConfig="mzhou9102" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="8e53f176-895f-4092-a4d6-572cac1f3157" name="miner_z9103">
+        <fileTransfer accessType="SFTP" host="34.118.164.232" port="22" sshConfigId="21f1abe2-0a9e-4c55-b717-2650e51f56c2" sshConfig="mzhou9103" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="956d55d4-eb1e-49aa-806e-0c5c20e04bbb" name="miner_z9104">
+        <fileTransfer accessType="SFTP" host="34.118.173.76" port="22" sshConfigId="55f9bcae-7b2e-44d0-8655-0378445bb9d7" sshConfig="mzhou9105" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="9d1d1540-4576-4841-8c91-1aa064796ca2" name="tao9007">
+        <fileTransfer accessType="SFTP" host="34.66.163.99" port="22" sshConfigId="39dce7f7-c9c2-406e-9ed2-502ba7437ff4" sshConfig="tao9007" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

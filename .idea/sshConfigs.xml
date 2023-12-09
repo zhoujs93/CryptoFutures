@@ -2,23 +2,41 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="34.130.158.194" id="0622bf37-6a23-4899-93e0-db592f6ab68a" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="crypto" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
-        <option name="customName" value="crypto" />
+      <sshConfig host="34.130.40.179" id="a3250598-d084-4068-b9e7-f91d62e811fd" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="tao9003" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="tao9003" />
       </sshConfig>
-      <sshConfig host="34.130.173.115" id="5616b6ed-f134-472e-b8c7-2c3d5242d10e" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-4" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
-        <option name="customName" value="cryptofutures-4" />
+      <sshConfig host="34.95.35.179" id="ddbe8370-e892-46bc-b914-ed5d1cb53477" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="tao9006" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="tao9006" />
       </sshConfig>
-      <sshConfig host="34.130.158.194" id="a3250598-d084-4068-b9e7-f91d62e811fd" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-5" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
-        <option name="customName" value="cryptofutures-5" />
+      <sshConfig host="34.130.173.115" id="dc6570af-6176-427c-8d13-d0178cb2503c" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="tao9001" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="tao9001" />
       </sshConfig>
-      <sshConfig host="34.130.40.179" id="ddbe8370-e892-46bc-b914-ed5d1cb53477" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-6" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
-        <option name="customName" value="cryptofutures-6" />
+      <sshConfig host="34.130.156.186" id="5b5ead3a-0392-4ee1-864f-9c3b4f98f6de" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="tao9005" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="tao9005" />
       </sshConfig>
-      <sshConfig host="34.173.190.78" id="dc6570af-6176-427c-8d13-d0178cb2503c" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="cryptofutures-7" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
-        <option name="customName" value="cryptofutures-7" />
+      <sshConfig host="34.130.39.105" id="9b05eda3-ecab-4553-ae8d-6f3b2f0238ae" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="mzhou9100" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="mzhou9100" />
       </sshConfig>
-      <sshConfig host="195.201.40.27" id="880fe7f4-0fe9-4781-be04-bb413dba0eaa" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="hetzner-putsncalls23" nameFormat="CUSTOM" username="root" useOpenSSHConfig="true">
-        <option name="customName" value="hetzner-putsncalls23" />
+      <sshConfig host="34.130.166.162" id="7304fc8a-b169-4b99-aca8-bcd88617f3ad" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="tao9004" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="tao9004" />
+      </sshConfig>
+      <sshConfig host="34.118.184.221" id="dd35db5d-578c-4292-8e1b-94231acf22b1" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="mzhou9101" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="mzhou9101" />
+      </sshConfig>
+      <sshConfig host="35.203.6.163" id="aee6f053-5a03-4554-b1d5-b0831368ef03" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="richie9200" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="richie9200" />
+      </sshConfig>
+      <sshConfig host="34.152.12.98" id="1599106b-4670-4f08-b467-c085e3cceb16" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="mzhou9102" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="mzhou9102" />
+      </sshConfig>
+      <sshConfig host="34.118.164.232" id="21f1abe2-0a9e-4c55-b717-2650e51f56c2" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="mzhou9103" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="mzhou9103" />
+      </sshConfig>
+      <sshConfig host="34.118.173.76" id="55f9bcae-7b2e-44d0-8655-0378445bb9d7" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="mzhou9105" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="mzhou9105" />
+      </sshConfig>
+      <sshConfig host="34.66.163.99" id="39dce7f7-c9c2-406e-9ed2-502ba7437ff4" keyPath="$USER_HOME$/.ssh/google_cloud_compute_putsncalls23" port="22" customName="tao9007" nameFormat="CUSTOM" username="putsncalls23" useOpenSSHConfig="true">
+        <option name="customName" value="tao9007" />
       </sshConfig>
     </configs>
   </component>

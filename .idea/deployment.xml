@@ -1,8 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="miner_z9102" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="crypto">
+      <paths name="cryptofutures-6">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="cryptofutures-gpu">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="hetzner">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="miner_z9100">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="miner_z9101">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="miner_z9102">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="miner_z9103">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="miner_z9104">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="richie9200">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tao9001">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tao9002">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tao9003">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tao9004">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tao9005">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tao9006">
         <serverdata>
           <mappings>
             <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
@@ -15,38 +113,10 @@
           </excludedPaths>
         </serverdata>
       </paths>
-      <paths name="cryptofutures-3">
+      <paths name="tao9007">
         <serverdata>
           <mappings>
             <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="cryptofutures-5">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="cryptofutures-6">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="cryptofutures-7">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/home/putsncalls23/CryptoFutures" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="hetzner">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/root/CryptoFutures" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -353,15 +353,14 @@ def run_module(
 
     time_series_data["date"] = time_series_data.index
     time_series_data = time_series_data.reset_index(drop=True)
-    output = []
     for window_end in range(lookback_window_length + 1, len(time_series_data)):
         ts_data_window = time_series_data.iloc[
             window_end - (lookback_window_length + 1) : window_end
-        ][["date", "returns_5m"]].copy()
+        ][["date", "daily_returns"]].copy()
         ts_data_window["X"] = ts_data_window.index.astype(float)
-        ts_data_window = ts_data_window.rename(columns={"returns_5m": "Y"})
+        ts_data_window = ts_data_window.rename(columns={"daily_returns": "Y"})
         time_index = window_end - 1
-        window_date = ts_data_window["date"].iloc[-1]
+        window_date = ts_data_window["date"].iloc[-1].strftime("%Y-%m-%d")
 
         try:
             if use_kM_hyp_to_initialise_kC:
@@ -382,5 +381,9 @@ def run_module(
             # write as NA when fails and will deal with this later
             cp_score, cp_loc, cp_loc_normalised = "NA", "NA", "NA"
 
-        output += [window_date, time_index, cp_loc, cp_loc_normalised, cp_score]
-    return output
+        # #write the reults to the csv
+        with open(output_csv_file_path, "a") as f:
+            writer = csv.writer(f)
+            writer.writerow(
+                [window_date, time_index, cp_loc, cp_loc_normalised, cp_score]
+            )

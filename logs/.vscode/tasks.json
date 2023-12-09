@@ -1,0 +1,265 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "miner_live9001",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.130.173.115"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_live9002",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.130.158.194"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_live9003",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.95.35.179"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_live9004",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.130.166.162"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_live9005",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.130.156.186"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_live9006",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.95.35.179"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_live9007",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.66.163.99"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_z9100",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.130.39.105"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_z9101",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.118.184.221"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_z9102",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.152.12.98"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_z9103",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.118.164.232"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "miner_z9104",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@34.118.173.76"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "richie9200",
+			"type": "shell",
+			"command": "ssh",
+			"args": [
+				"-i",
+				"/Users/johnz/.ssh/google_cloud_compute_putsncalls23", 
+				"putsncalls23@35.203.6.163"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+		},
+		{
+			"label": "Run Both SSH TAO",
+			"type": "shell",
+			"dependsOn": [
+				"miner_live9001", "miner_live9002", "miner_live9003", "miner_live9004",
+				"miner_live9005", "miner_live9006", "miner_live9007", "miner_z9100", "miner_z9101",
+				"miner_z9102", "miner_z9103", "miner_z9104"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+		}
+	]
+}
